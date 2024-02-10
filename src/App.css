@@ -1,0 +1,336 @@
+/* styles.css or App.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c;
+  color: #f8f8f2;
+  overflow: hidden; /* Hide body overflow to prevent unnecessary scrollbars */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* Set full height of the viewport */
+  overflow: auto; /* Enable vertical scrolling when content overflows */
+}
+
+.buttons-container {
+  margin-top: 80px; /* Adjust the margin to provide space below the fixed header */
+}
+
+.editors-container {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 120px); /* Adjust the min-height as needed (considering header and footer) */
+  justify-content: space-around;
+  position: relative;
+}
+
+
+
+
+/* Rest of your existing styles... */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1c1c1c;
+  color: #f8f8f2;
+  overflow: hidden; /* Hide body overflow to prevent unnecessary scrollbars */
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#particles-js {
+  background-color: #1c1c1c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+/* .app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+} */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* Set full height of the viewport */
+  position: relative;
+}
+
+.buttons-container {
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.editors-container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 120px); /* Adjust the height as needed (considering header and footer) */
+  justify-content: space-around;
+  overflow: auto; /* Enable vertical scrolling when content overflows */
+  position: relative;
+}
+
+.editor-pane{
+  position: relative;
+  background-color: #282a36;
+}
+
+.editor-buttons {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  z-index: 10;
+  /* Add additional styling as needed */
+}
+
+
+.buttons-container > div, .buttons-container > p  {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #3f51b5, #2196f3);
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #2196f3, #3f51b5);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.3);
+    color: #eee;
+  }
+}
+
+
+
+.editor-buttons > button:first-child {
+  padding: 0px;
+  background-color: #61dafb;
+  color: #282a36;
+  cursor: pointer;
+}
+
+.editor-buttons > button:hover {
+  background-color: #44475a;
+}
+
+/* button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: rgb(22, 14, 243);
+  color: white;
+  border: none;
+  cursor: pointer;
+} */
+
+/* button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+
+
+  background-color: tomato;
+  color: white;
+  border: none;
+padding: 0.8vmax 4vmax; 
+  width: 50%;
+ font: 300 0.8vmax "Roboto";
+  margin: 1vmax 4vmax; 
+  cursor: pointer;
+  border-radius: 30px;
+}
+ */
+
+.cog-button ,.dropdown-content>div {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  background-color: none;
+  color: rgb(0, 0, 0);
+  border: 2.5px solid #1565c0;
+  text-align: center;
+  cursor: pointer;
+  width: 35px; /* Adjust the width to maintain a circular shape */
+  height: 35px; /* Adjust the height to maintain a circular shape */
+  border-radius: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #44475a;
+    color: #fff;
+  }
+}
+
+
+
+.tooltip {
+  will-change: transform;
+}
+
+button:hover {
+  background-color: #0d47a1;
+}
+
+
+
+.xml-editor,
+.json-editor {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid #1565c0; /* Slightly darker shade of the button color */
+}
+
+.xml-editor:hover,
+.json-editor:hover {
+  border: 4px double #368df0; /* Adjust border style, color, and width on hover */
+  transition: border-color 0.3s ease; 
+}
+
+/* Add these styles for the dropdown */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  z-index: 9;
+  border-radius: 100%; /* Set border-radius to 50% for a circular shape */
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+/* .cog-icon {
+  transition: transform 0.3s ease; 
+} */
+
+.rotate {
+  transform: rotate(90deg); /* Rotate the cog icon when dropdown is open */
+}
+
+
+
+
+
+
+
+
+/* Custom Tooltip Styles */
+.tooltip-inner {
+  background-color: #2196f3; /* Match with the button color */
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  max-width: 200px; /* Adjust the maximum width as needed */
+  text-align: center; /* Center the text within the tooltip */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.tooltip.show {
+  opacity: 1;
+  transition: opacity 0.2s ease, transform 0.2s ease; /* Add transition for transform */
+  transform: translateX(-50%); /* Center the tooltip horizontally */
+  bottom: 125%; /* Adjust the distance from the triggering element */
+  left: 50%; /* Center the tooltip horizontally */
+}
+
+.tooltip-arrow {
+  border-bottom-color: #333 !important; /* Adjust arrow color */
+}
+
+.dropdown-content > div {
+  /* ... existing styles ... */
+
+  .tooltip {
+    opacity: 0;
+    transition: opacity 0.2s ease; /* Add transition for opacity */
+    position: absolute;
+    bottom: 125%; /* Adjust the distance from the triggering element */
+    left: 50%; /* Center the tooltip horizontally */
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+  }
+
+  &:hover .tooltip {
+    opacity: 1;
+  }
+}
+
+
+.tooltip {
+  opacity: 0;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 125%; /* Adjust the distance from the triggering element */
+  left: 50%; /* Center the tooltip horizontally */
+  transform: translateX(-50%); /* Center the tooltip horizontally */
+  transition: opacity 0.2s ease; /* Add transition for opacity */
+}
+
+
+
+body {
+  margin: 0;
+  overflow: hidden; /* Prevent the default margin and scrollbar */
+}
+
+.background-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.line {
+  position: absolute;
+  background-color: #42a5f5; /* Line color */
+  height: 1px;
+  width: 100vw;
+  transform-origin: 0% 100%;
+  animation: attractLine 2s linear infinite;
+}
+
+@keyframes attractLine {
+  to {
+    transform: scaleY(100) translateY(-50vh);
+  }
+}
